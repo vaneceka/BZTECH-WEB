@@ -1,0 +1,207 @@
+/* =========================================================
+   1) Design tokens (CSS variables)
+   ======================================================= */
+:root {
+  /* --bz-primary:   #113c8d; hlavní firemní modrá */
+  --bz-primary:   #4A818D;
+  --bz-secondary: #0b2455;
+  --bz-accent:    #00a8ff; /* akcent pro odkazy/hover */
+}
+
+
+/* =========================================================
+   2) Bootstrap overrides / utility barvy
+   ======================================================= */
+.btn-primary {
+  --bs-btn-bg:                 var(--bz-primary);
+  --bs-btn-border-color:       var(--bz-primary);
+  --bs-btn-hover-bg:           #0d2f6d;
+  --bs-btn-hover-border-color: #0d2f6d;
+}
+
+.link-primary {
+  color: var(--bz-primary) !important;
+}
+
+/* =========================================================
+   3) Layout: Navbar & Footer
+   ======================================================= */
+.navbar {
+  backdrop-filter: saturate(1.2) blur(8px);
+  background: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* .brand-mark {
+  color: var(--bz-primary);
+  font-weight: 800;
+  letter-spacing: 0.3px;
+} */
+
+.navbar-brand {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+
+.footer a {
+  color: #e6ecff;
+  text-decoration: none;
+}
+.footer a:hover {
+  color: #ffffff;
+}
+
+/* =========================================================
+   4) Sekce: Hero
+   ======================================================= */
+.hero {
+  align-items: center;
+  color: #fff;
+  display: grid;
+  min-height: 88vh;
+  place-items: center;
+  position: relative;
+  text-align: center;
+  background:
+    radial-gradient(80rem 30rem at 80% -10%, rgba(17, 60, 141, 0.35), transparent 40%),
+    linear-gradient(180deg, rgba(17, 60, 141, 0.7), rgba(17, 60, 141, 0.5)),
+    url('https://images.unsplash.com/photo-1516275460890-31d99c2fd720?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
+}
+
+.hero h1 {
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.hero .lead {
+  opacity: 0.95;
+}
+
+/* Plovoucí CTA uvnitř hero */
+.floating-cta {
+  bottom: 2rem;
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%);
+}
+
+/* Jemně tónované sekce */
+.section-muted {
+  background: linear-gradient(180deg, #f7f9fc, #ffffff);
+}
+
+/* =========================================================
+   5) Komponenty
+   ======================================================= */
+/* Ikony */
+.icon-xl {
+  color: var(--bz-primary);
+  font-size: 2.25rem;
+}
+
+/* Karta služby */
+.service-card {
+  border: 1px solid #eef2f7;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.service-card:hover {
+  box-shadow: 0 10px 20px rgba(17, 60, 141, 0.08);
+  transform: translateY(-3px);
+}
+
+/* Měkký badge */
+.badge-soft {
+  background: rgba(17, 60, 141, 0.08);
+  border: 1px solid rgba(17, 60, 141, 0.15);
+  color: var(--bz-primary);
+}
+
+/* Dělící linka */
+.divider {
+  background: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.08), transparent);
+  height: 1px;
+}
+
+/* =========================================================
+   6) Formuláře
+   ======================================================= */
+.form-control:focus {
+  border-color: var(--bz-primary);
+  box-shadow: 0 0 0 0.2rem rgba(17, 60, 141, 0.15);
+}
+
+/* =========================================================
+   7) Pomocné / volitelné
+   ======================================================= */
+/* .whatsapp {
+  bottom: 18px;
+  position: fixed;
+  right: 18px;
+  z-index: 1040;
+} */
+
+/* =========================================================
+   8) Responsivita
+   ======================================================= */
+@media (max-width: 991px) {
+  .hero {
+    min-height: 80vh;
+  }
+}
+
+/* =========================================================
+   9) LOGA
+   ======================================================= */
+.logo-slider {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  background-color: transparent; /* můžeš změnit */
+  padding: 20px 0;
+}
+
+.logo-slide-track {
+  display: flex;
+  width: calc(250px * 16); /* 16 = počet log (8 + 8 duplikátů) */
+  animation: scroll 60s linear infinite;
+}
+
+.logo-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 250px; /* šířka jednoho loga */
+  padding: 10px;
+}
+
+.logo-slide img {
+  max-width: 180px;
+  max-height: 80px;
+  /* filter: grayscale(100%); */
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+
+.logo-slide img:hover {
+  filter: none;
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+@keyframes scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(calc(-250px * 8)); } /* 8 = původní počet log */
+}
+
+/* Responsivita */
+@media (max-width: 768px) {
+  .logo-slide { width: 200px; }
+  .logo-slide img { max-width: 140px; }
+}
+
+@media (max-width: 480px) {
+  .logo-slide { width: 150px; }
+  .logo-slide img { max-width: 100px; }
+}
+
+html { scroll-padding-top: 80px; } /* výška tvé navbar (zkus 80–100px) */
