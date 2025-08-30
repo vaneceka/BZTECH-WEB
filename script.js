@@ -17,3 +17,60 @@ document.querySelectorAll('a[href^="#"]').forEach(a=>{
     })
 })
 
+// Alert pro kontakni formular
+document.addEventListener('DOMContentLoaded', () => {
+  // Rok do footeru, pokud máte <span id="year"></span>
+  const yearEl = document.getElementById('year');
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+  // Najdeme formulář v pravém sloupci
+  const form = document.querySelector('#kontakt form.p-4.bg-white.rounded-4.shadow-sm');
+  if (!form) return;
+
+  // ZRUŠÍME inline onsubmit z HTML, ale HTML necháváme beze změn
+  form.setAttribute('onsubmit', '');
+  form.onsubmit = null;
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    // Načteme hodnoty podle ID
+    const name    = document.getElementById('jmeno')?.value?.trim() ?? '';
+    const email   = document.getElementById('email')?.value?.trim() ?? '';
+    const phone   = document.getElementById('telefon')?.value?.trim() ?? '';
+    const message = document.getElementById('zprava')?.value?.trim() ?? '';
+    const gdprOk  = document.getElementById('gdpr')?.checked ?? false;
+
+    if (!gdprOk) {
+      alert('Prosím potvrďte souhlas se zpracováním osobních údajů.');
+      return;
+    }
+    if (!name || !email || !message) {
+      alert('Vyplňte prosím jméno, e-mail a zprávu.');
+      return;
+    }
+
+    // Pošleme data na backend
+    const fd = new FormData();
+    fd.append('name', name);
+    fd.append('email', email);
+    fd.append('phone', phone);
+    fd.append('message', message);
+    fd.append('gdpr', 'on');  // jen flag, backend si zkontroluje
+
+    try {
+      const res = await fetch('contact.php', { method: 'POST', body: fd });
+      const data = await res.json().catch(() => ({}));
+
+      if (res.ok && data.success) {
+        alert('Děkujeme! Vaši zprávu jsme přijali a brzy se ozveme.');
+        form.reset();
+      } else {
+        alert('Odeslání se nepodařilo: ' + (data?.error ?? 'zkuste to prosím později.'));
+      }
+    } catch (err) {
+      alert('Nastala chyba při odesílání. Zkuste to prosím znovu.');
+    }
+  });
+});
+

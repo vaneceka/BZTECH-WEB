@@ -249,44 +249,40 @@
           </div>
         </div>
         <div class="col-lg-7">
-          <form class="p-4 bg-white rounded-4 shadow-sm" onsubmit="event.preventDefault(); this.reset(); alert('Děkujeme! Vaši zprávu jsme zaznamenali.');">
-            <div class="row g-3">
-              <div class="col-md-6">
-                <label for="jmeno" class="form-label">Jméno a příjmení</label>
-                <input type="text" id="jmeno" class="form-control" required>
-              </div>
-              <div class="col-md-6">
-                <label for="email" class="form-label">E‑mail</label>
-                <input type="email" id="email" class="form-control" required>
-              </div>
-              <div class="col-md-6">
-                <label for="telefon" class="form-label">Telefon</label>
-                <input type="tel" id="telefon" class="form-control">
-              </div>
-              <div class="col-md-6">
-                <label for="sluzba" class="form-label">Vyberte službu</label>
-                <select id="sluzba" class="form-select">
-                  <option>Elektroinstalace</option>
-                  <option>Revize</option>
-                  <option>Fotovoltaika</option>
-                  <option>Nabíjecí stanice</option>
-                  <option>Jiné</option>
-                </select>
-              </div>
-              <div class="col-12">
-                <label for="zprava" class="form-label">Zpráva</label>
-                <textarea id="zprava" rows="5" class="form-control" placeholder="Napište nám detaily poptávky…" required></textarea>
-              </div>
-              <div class="col-12 d-flex align-items-center gap-2">
-                <input class="form-check-input" type="checkbox" id="gdpr" required>
-                <label for="gdpr" class="form-check-label small">Souhlasím se zpracováním osobních údajů pro účely kontaktování.</label>
-              </div>
-            </div>
-            <div class="d-grid d-sm-flex justify-content-sm-end mt-3">
-              <button class="btn btn-primary btn-lg" type="submit"><i class="bi bi-send-fill me-2"></i>Odeslat</button>
-            </div>
-          </form>
-        </div>
+  <form id="contact-form" class="p-4 bg-white rounded-4 shadow-sm">
+    <div class="row g-3">
+      <div class="col-12">
+        <label for="jmeno" class="form-label">Jméno a příjmení</label>
+        <input type="text" id="jmeno" name="name" class="form-control" required>
+      </div>
+      <div class="col-12">
+        <label for="email" class="form-label">E-mail</label>
+        <input type="email" id="email" name="email" class="form-control" required>
+      </div>
+      <div class="col-12">
+        <label for="telefon" class="form-label">Telefon</label>
+        <input type="tel" id="telefon" name="phone" class="form-control">
+      </div>
+      <div class="col-12">
+        <label for="zprava" class="form-label">Zpráva</label>
+        <textarea id="zprava" name="message" rows="5" class="form-control" placeholder="Napište nám detaily poptávky…" required></textarea>
+      </div>
+      <div class="col-12 d-flex align-items-center gap-2">
+        <input class="form-check-input" type="checkbox" id="gdpr" name="gdpr" required>
+        <label for="gdpr" class="form-check-label small">
+          Souhlasím se zpracováním osobních údajů pro účely kontaktování.
+        </label>
+      </div>
+    </div>
+    <div class="d-grid d-sm-flex justify-content-sm-end mt-3">
+      <button class="btn btn-primary btn-lg" type="submit">
+        <i class="bi bi-send-fill me-2"></i>Odeslat
+      </button>
+    </div>
+    <!-- místo pro hlášku ze script.js -->
+    <div id="form-status" class="mt-3"></div>
+  </form>
+</div>
       </div>
     </div>
   </section>
