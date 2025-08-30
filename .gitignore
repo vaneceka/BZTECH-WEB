@@ -1,0 +1,37 @@
+# ============================================
+# OS / Editor
+# ============================================
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.log
+
+# ============================================
+# PHP / Composer
+# ============================================
+/vendor/           # Composer balíčky (můžou se vždy doinstalovat)
+composer.lock      # volitelné ignorovat, ale doporučuje se spíš verzovat
+*.cache
+*.tmp
+
+# ============================================
+# Enviroment / konfigurace
+# ============================================
+.env
+.env.local
+.env.*.local
+
+# ============================================
+# Node / Frontend (pokud bys používal npm/yarn)
+# ============================================
+/node_modules/
+package-lock.json
+yarn.lock
+
+# ============================================
+# Build / dist / assets
+# ============================================
+/dist/
+/build/
+/public/uploads/*
