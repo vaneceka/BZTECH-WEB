@@ -1,6 +1,7 @@
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+console.log("script.js načten");
+alert("JS běží");
 
- // Aktuální rok ve footeru
+// Aktuální rok ve footeru
 document.getElementById('year').textContent = new Date().getFullYear();
 
 // Hladké skrolování s offsetem kvůli fixed navbaru
@@ -19,58 +20,47 @@ document.querySelectorAll('a[href^="#"]').forEach(a=>{
 
 // Alert pro kontakni formular
 document.addEventListener('DOMContentLoaded', () => {
-  // Rok do footeru, pokud máte <span id="year"></span>
-  const yearEl = document.getElementById('year');
-  if (yearEl) yearEl.textContent = new Date().getFullYear();
-
-  // Najdeme formulář v pravém sloupci
-  const form = document.querySelector('#kontakt form.p-4.bg-white.rounded-4.shadow-sm');
+  const form = document.getElementById('contact-form');
+  const statusBox = document.getElementById('form-status');
   if (!form) return;
 
-  // ZRUŠÍME inline onsubmit z HTML, ale HTML necháváme beze změn
-  form.setAttribute('onsubmit', '');
-  form.onsubmit = null;
-
   form.addEventListener('submit', async (e) => {
-    e.preventDefault();
+    e.preventDefault(); // zabrání přechodu na JSON stránku
 
-    // Načteme hodnoty podle ID
     const name    = document.getElementById('jmeno')?.value?.trim() ?? '';
     const email   = document.getElementById('email')?.value?.trim() ?? '';
     const phone   = document.getElementById('telefon')?.value?.trim() ?? '';
     const message = document.getElementById('zprava')?.value?.trim() ?? '';
     const gdprOk  = document.getElementById('gdpr')?.checked ?? false;
 
-    if (!gdprOk) {
-      alert('Prosím potvrďte souhlas se zpracováním osobních údajů.');
-      return;
-    }
-    if (!name || !email || !message) {
-      alert('Vyplňte prosím jméno, e-mail a zprávu.');
-      return;
-    }
+    if (!gdprOk)  { alert('Prosím potvrďte souhlas se zpracováním osobních údajů.'); return; }
+    if (!name || !email || !message) { alert('Vyplňte prosím jméno, e-mail a zprávu.'); return; }
 
-    // Pošleme data na backend
     const fd = new FormData();
     fd.append('name', name);
     fd.append('email', email);
     fd.append('phone', phone);
     fd.append('message', message);
-    fd.append('gdpr', 'on');  // jen flag, backend si zkontroluje
+    fd.append('gdpr', 'on');
+
+    const url = form.getAttribute('action') || 'contact.php';
+    if (statusBox) statusBox.innerHTML = '<div class="text-secondary">Odesílám…</div>';
 
     try {
-      const res = await fetch('contact.php', { method: 'POST', body: fd });
-      const data = await res.json().catch(() => ({}));
+      const res = await fetch(url, { method: 'POST', body: fd });
+      const text = await res.text();
+      let data = {};
+      try { data = JSON.parse(text); } catch {}
 
       if (res.ok && data.success) {
-        alert('Děkujeme! Vaši zprávu jsme přijali a brzy se ozveme.');
+        if (statusBox) statusBox.innerHTML = '<div class="alert alert-success mb-0">Děkujeme! Zpráva byla odeslána.</div>';
         form.reset();
       } else {
-        alert('Odeslání se nepodařilo: ' + (data?.error ?? 'zkuste to prosím později.'));
+        const msg = data.error || `Chyba při odeslání (${res.status}).`;
+        if (statusBox) statusBox.innerHTML = `<div class="alert alert-danger mb-0">${msg}</div>`;
       }
     } catch (err) {
-      alert('Nastala chyba při odesílání. Zkuste to prosím znovu.');
+      if (statusBox) statusBox.innerHTML = `<div class="alert alert-danger mb-0">Síťová chyba: ${err?.message || 'zkuste to znovu'}</div>`;
     }
   });
 });
-
