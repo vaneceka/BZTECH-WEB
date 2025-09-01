@@ -1,6 +1,3 @@
-console.log("script.js načten");
-alert("JS běží");
-
 // Aktuální rok ve footeru
 document.getElementById('year').textContent = new Date().getFullYear();
 
