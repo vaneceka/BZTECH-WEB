@@ -1,3 +1,6 @@
+<?php require 'includes/config.php'; ?>
+<?php require 'includes/head.php'; ?>
+<?php require 'includes/navbar.php'; ?>
 <?php
 // $zakazky = [
 //   [
@@ -278,14 +281,14 @@ $zakazky = [
     'misto' => 'Hradiště',
     'rok' => '2020',
     'cena' => '930 000 Kč',
-    'investor' => 'SčVK'
+    'investor' => 'SčVK as.'
   ],
   [
     'nazev' => 'Elektroinstalace ČOV Jirkov',
     'misto' => 'Jirkov',
     'rok' => '2020',
     'cena' => '1 420 000 Kč',
-    'investor' => 'SčVK'
+    'investor' => 'SčVK as.'
   ],
   [
     'nazev' => 'Papírna Perštejn – rekonstrukce',
@@ -421,14 +424,14 @@ usort($zakazky, function ($a, $b) {
 </head>
 <body>
 <section class="section-muted py-5">
-<div class="container" sec>
+<div class="container">
   <h1 class="fw-bold mb-3 text-center">Přehled vybraných zakázek</h1>
 
   <!-- ZPĚT -->
   <div class="mb-4">
-    <a href="index.php" class="btn btn-outline-secondary">
-      <i class="bi bi-arrow-left me-2"></i>Zpět na hlavní stránku
-    </a>
+  <button class="btn btn-outline-secondary" onclick="history.back()">
+    <i class="bi bi-arrow-left me-2"></i>Zpět
+  </button>
   </div>
 
   <!-- TABULKA -->
@@ -468,3 +471,5 @@ usort($zakazky, function ($a, $b) {
 </section>
 </body>
 </html>
+
+<?php require 'includes/footer.php'; ?>

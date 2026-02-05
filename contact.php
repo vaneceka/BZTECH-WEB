@@ -80,6 +80,7 @@ try {
 
   $mail->send();
   echo json_encode(['success' => true]);
+  exit;
 } catch (Exception $e) {
   http_response_code(500);
   echo json_encode([
@@ -87,4 +88,6 @@ try {
     'error' => 'Nepodařilo se odeslat e-mail. Zkontrolujte SMTP nastavení.',
     // 'debug' => $e->getMessage(), // případně dočasně odkomentujte
   ]);
+  exit;
 }
+

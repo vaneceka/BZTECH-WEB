@@ -1,6 +1,3 @@
-// Aktuální rok ve footeru
-document.getElementById('year').textContent = new Date().getFullYear();
-
 // Hladké skrolování s offsetem kvůli fixed navbaru
 document.querySelectorAll('a[href^="#"]').forEach(a=>{
     a.addEventListener('click',e=>{

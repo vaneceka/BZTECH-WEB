@@ -1,22 +1,6 @@
-<?php
-$companyName = "BZ-tech s.r.o.";
-$ico = "25406019";
-$email = "info@bz-tech.cz";
-
-$phoneDisplay = "+420 608 028 690";
-$phoneTel = "+420608028690";
-
-$address = "Mostecká 387, 431 11 Jirkov";
-
-$schemaUrl = "https://www.bz-tech.cz/";
-$schemaImage = "https://via.placeholder.com/1200x630.png?text=BZ-tech+s.r.o.";
-$schemaDescription = "Elektroinstalace, revize, fotovoltaika a chytrá řešení pro firmy i domácnosti.";
-
-$streetAddress = "Mostecká 387";
-$addressLocality = "Jirkov";
-$postalCode = "431 11";
-$addressCountry = "CZ";
-?>
+<?php require 'includes/config.php'; ?>
+<?php require 'includes/head.php'; ?>
+<?php require 'includes/navbar.php'; ?>
 <!doctype html>
 <html lang="cs">
 <head>
@@ -57,8 +41,8 @@ $addressCountry = "CZ";
   </script>
 </head>
 
-<body>
-  <!-- NAVBAR -->
+<!-- <body>
+  NAVBAR
   <nav class="navbar navbar-expand-lg fixed-top">
     <div class="container">
       <a class="navbar-brand d-flex align-items-center" href="#home" aria-label="<?= htmlspecialchars($companyName) ?> domů">
@@ -76,7 +60,7 @@ $addressCountry = "CZ";
         </ul>
       </div>
     </div>
-  </nav>
+  </nav>  -->
 
   <!-- HERO -->
   <header id="home" class="hero">
@@ -253,24 +237,27 @@ $addressCountry = "CZ";
 
       <div class="logo-slider">
         <div class="logo-slide-track">
-          <!-- ... loga beze změny ... -->
-          <div class="logo-slide"><img src="images/jirkov.jpeg" alt="Klient 1"></div>
+          <div class="logo-slide"><img src="images/jirkov.png" alt="Klient 1"></div>
           <div class="logo-slide"><img src="images/kadanm.jpg" alt="Klient 2"></div>
           <div class="logo-slide"><img src="images/chomutov.png" alt="Klient 3"></div>
           <div class="logo-slide"><img src="images/99.png" alt="Klient 4"></div>
-          <div class="logo-slide"><img src="images/svs.jpg" alt="Klient 5"></div>
-          <div class="logo-slide"><img src="images/vejprty.png" alt="Klient 6"></div>
+          <!-- <div class="logo-slide"><img src="images/svs.jpg" alt="Klient 5"></div> -->
+          <div class="logo-slide"><img src="images/jorcon.png" alt="Klient 6"></div>
           <div class="logo-slide"><img src="images/split.png" alt="Klient 7"></div>
           <div class="logo-slide"><img src="images/scvk2.png" alt="Klient 8"></div>
+          <div class="logo-slide"><img src="images/hpstav.png" alt="Klient 9"></div>
+          <div class="logo-slide"><img src="images/petrom.png" alt="Klient 10"></div>
 
-          <div class="logo-slide"><img src="images/jirkov.jpeg" alt="Klient 1"></div>
+          <div class="logo-slide"><img src="images/jirkov.png" alt="Klient 1"></div>
           <div class="logo-slide"><img src="images/kadanm.jpg" alt="Klient 2"></div>
           <div class="logo-slide"><img src="images/chomutov.png" alt="Klient 3"></div>
           <div class="logo-slide"><img src="images/99.png" alt="Klient 4"></div>
-          <div class="logo-slide"><img src="images/svs.jpg" alt="Klient 5"></div>
-          <div class="logo-slide"><img src="images/vejprty.png" alt="Klient 6"></div>
+          <!-- <div class="logo-slide"><img src="images/svs.jpg" alt="Klient 5"></div> -->
+          <div class="logo-slide"><img src="images/jorcon.png" alt="Klient 6"></div>
           <div class="logo-slide"><img src="images/split.png" alt="Klient 7"></div>
           <div class="logo-slide"><img src="images/scvk2.png" alt="Klient 8"></div>
+          <div class="logo-slide"><img src="images/hpstav.png" alt="Klient 9"></div>
+          <div class="logo-slide"><img src="images/petrom.png" alt="Klient 10"></div>
         </div>
       </div>
     </div>
@@ -346,7 +333,7 @@ $addressCountry = "CZ";
               </div>
             </div>
             <div class="d-grid d-sm-flex justify-content-sm-end mt-3">
-              <button class="btn btn-primary btn-lg" type="submit">
+              <button class="btn btn-primary btn-md" type="submit">
                 <i class="bi bi-send-fill me-2"></i>Odeslat
               </button>
             </div>
@@ -358,7 +345,7 @@ $addressCountry = "CZ";
   </section>
 
   <!-- FOOTER -->
-  <footer class="footer py-5" style="background:linear-gradient(180deg, var(--bz-secondary), #071a3b); color:#c8d4ff">
+  <!-- <footer class="footer py-5" style="background:linear-gradient(180deg, var(--bz-secondary), #071a3b); color:#c8d4ff">
     <div class="container">
       <div class="row g-4">
         <div class="col-md-5">
@@ -399,9 +386,10 @@ $addressCountry = "CZ";
         <div>© <span id="year"></span> <?= htmlspecialchars($companyName) ?>. Všechna práva vyhrazena.</div>
       </div>
     </div>
-  </footer>
+  </footer> -->
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
+<?php require 'includes/footer.php'; ?>

@@ -71,7 +71,9 @@
   align-items: center;
   color: #fff;
   display: grid;
-  min-height: 88vh;
+  /* min-height: 100vh;
+  margin-top: -90px; */
+  min-height: calc(100vh - 90px);
   place-items: center;
   position: relative;
   text-align: center;
@@ -167,7 +169,7 @@
    ======================================================= */
 @media (max-width: 991px) {
   .hero {
-    min-height: 80vh;
+    min-height: calc(100svh - 90px);
   }
 }
 
@@ -184,7 +186,7 @@
 
 .logo-slide-track {
   display: flex;
-  width: calc(250px * 16); /* 16 = počet log (8 + 8 duplikátů) */
+  width: calc(250px * 18); /* 16 = počet log (8 + 8 duplikátů) */
   animation: scroll 60s linear infinite;
 }
 
@@ -212,7 +214,7 @@
 
 @keyframes scroll {
   0%   { transform: translateX(0); }
-  100% { transform: translateX(calc(-250px * 8)); } /* 8 = původní počet log */
+  100% { transform: translateX(calc(-250px * 9)); } /* 8 = původní počet log */
 }
 
 /* Responsivita */
@@ -227,3 +229,7 @@
 }
 
 html { scroll-padding-top: 80px; } /* výška tvé navbar (zkus 80–100px) */
+
+body {
+  padding-top: 90px; 
+}
