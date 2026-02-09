@@ -3,7 +3,7 @@
 <?php require 'includes/navbar.php'; ?>
 
   <!-- HERO -->
-  <header id="home" class="hero">
+  <!-- <header id="home" class="hero">
     <div class="container py-5">
       <div class="row justify-content-center">
         <div class="col-xl-9 col-lg-10">
@@ -19,7 +19,43 @@
     <div class="floating-cta">
       <a href="#sluzby" class="text-white-50 small text-decoration-none"><i class="bi bi-chevron-double-down"></i> Pokračovat</a>
     </div>
-  </header>
+  </header> -->
+
+  <header id="home" class="hero">
+  <div class="hero-content">
+    <div class="container py-5">
+      <div class="row justify-content-center">
+        <div class="col-xl-9 col-lg-10">
+
+          <h1 class="display-4 mb-3">
+            Elektroinstalace, revize a chytrá řešení pro firmy i domácnosti
+          </h1>
+
+          <p class="lead mb-4">
+            Komplexní přístup, špičková kvalita a jasné termíny.
+            Postaráme se o vše od návrhu po servis.
+          </p>
+
+          <div class="d-flex gap-3 justify-content-center">
+            <a href="#kontakt" class="btn btn-lg btn-primary">
+              <i class="bi bi-envelope-paper-fill me-2"></i>Poptat služby
+            </a>
+            <a href="#sluzby" class="btn btn-lg btn-outline-light">
+              <i class="bi bi-grid-fill me-2"></i>Prohlédnout služby
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="floating-cta">
+    <a href="#sluzby" class="text-white-50 small text-decoration-none">
+      <i class="bi bi-chevron-double-down"></i> Pokračovat
+    </a>
+  </div>
+</header>
 
   <!-- SLUZBY -->
   <section id="sluzby" class="py-6 py-5">

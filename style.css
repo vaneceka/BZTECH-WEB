@@ -63,13 +63,14 @@
    Sekce: Hero
    ======================================================= */
 
-.hero {
+   /* min-height: calc(100vh - 90px); */
+/* .hero {
   align-items: center;
   color: #fff;
   display: grid;
   min-height: 100vh;
   margin-top: -90px;
-  /* min-height: calc(100vh - 90px); */
+  
   place-items: center;
   position: relative;
   text-align: center;
@@ -78,15 +79,41 @@
       rgba(17, 60, 141, 0.75),
       rgba(7, 26, 59, 0.85)
     ),
-    /* url("intro.png"); */
     url("intro.jpg");
   background-size: cover;   
   background-position: center;
   background-repeat: no-repeat;
-  /* background:
-    radial-gradient(80rem 30rem at 80% -10%, rgba(17, 60, 141, 0.35), transparent 40%),
-    linear-gradient(180deg, rgba(17, 60, 141, 0.7), rgba(17, 60, 141, 0.5)),
-    url('https://images.unsplash.com/photo-1516275460890-31d99c2fd720?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat; */
+} */
+
+.hero {
+  position: relative;
+  color: #fff;
+  text-align: center;
+  background-position: center top;
+
+  /* min-height: calc(100svh - 90px);  */
+  /* min-height: calc(100dvh - 90px);  */
+  min-height: calc(100vh - 90px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-image:
+    linear-gradient(
+      rgba(17, 60, 141, 0.75),
+      rgba(7, 26, 59, 0.85)
+    ),
+    url("intro.jpg");
+
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+
+.hero-content {
+  width: 100%;
+  padding: 0 1rem;
 }
 
 .hero h1 {
@@ -150,14 +177,6 @@
   box-shadow: 0 0 0 0.2rem rgba(17, 60, 141, 0.15);
 }
 
-/* =========================================================
-   8) Responsivita
-   ======================================================= */
-@media (max-width: 991px) {
-  .hero {
-    min-height: calc(100svh - 90px);
-  }
-}
 
 /* =========================================================
    9) LOGA
