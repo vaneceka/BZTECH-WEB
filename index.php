@@ -1,66 +1,6 @@
 <?php require 'includes/config.php'; ?>
 <?php require 'includes/head.php'; ?>
 <?php require 'includes/navbar.php'; ?>
-<!doctype html>
-<html lang="cs">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title><?= htmlspecialchars($companyName) ?></title>
-  <meta name="description" content="<?= htmlspecialchars($schemaDescription) ?>">
-  <meta name="theme-color" content="#113c8d">
-
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="<?= htmlspecialchars($companyName) ?> — Elektroinstalace, revize, chytrá řešení">
-  <meta property="og:description" content="<?= htmlspecialchars($schemaDescription) ?>">
-  <meta property="og:image" content="<?= htmlspecialchars($schemaImage) ?>">
-
-  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Electrician",
-    "name": "<?= htmlspecialchars($companyName, ENT_QUOTES) ?>",
-    "url": "<?= htmlspecialchars($schemaUrl, ENT_QUOTES) ?>",
-    "image": "<?= htmlspecialchars($schemaImage, ENT_QUOTES) ?>",
-    "description": "<?= htmlspecialchars($schemaDescription, ENT_QUOTES) ?>",
-    "telephone": "<?= htmlspecialchars($phoneDisplay, ENT_QUOTES) ?>",
-    "address": {
-      "@type":"PostalAddress",
-      "streetAddress":"<?= htmlspecialchars($streetAddress, ENT_QUOTES) ?>",
-      "addressLocality":"<?= htmlspecialchars($addressLocality, ENT_QUOTES) ?>",
-      "postalCode":"<?= htmlspecialchars($postalCode, ENT_QUOTES) ?>",
-      "addressCountry":"<?= htmlspecialchars($addressCountry, ENT_QUOTES) ?>"
-    }
-  }
-  </script>
-</head>
-
-<!-- <body>
-  NAVBAR
-  <nav class="navbar navbar-expand-lg fixed-top">
-    <div class="container">
-      <a class="navbar-brand d-flex align-items-center" href="#home" aria-label="<?= htmlspecialchars($companyName) ?> domů">
-        <img src="images/logo.png" alt="<?= htmlspecialchars($companyName) ?> logo" height="70" class="me-2">
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Přepnout navigaci">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="mainNav">
-        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
-          <li class="nav-item"><a class="nav-link" href="#sluzby">Služby</a></li>
-          <li class="nav-item"><a class="nav-link" href="#onas">O nás</a></li>
-          <li class="nav-item"><a class="nav-link" href="#reference">Reference</a></li>
-          <li class="nav-item ms-lg-3"><a class="btn btn-primary px-3" href="#kontakt">Poptat služby</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>  -->
 
   <!-- HERO -->
   <header id="home" class="hero">
@@ -81,14 +21,6 @@
     </div>
   </header>
 
-  <!-- USP / CLAIM -->
-  <!-- <section class="section-muted py-5">
-    <div class="container text-center">
-      <h2 class="h3 fw-bold">Vydělávejte. Zbytek zařídíme my.</h2>
-      <p class="text-body-secondary mb-0">Komplexní přístup • Pružnost • Kvalita • Termín</p>
-    </div>
-  </section> -->
-
   <!-- SLUZBY -->
   <section id="sluzby" class="py-6 py-5">
     <div class="container">
@@ -97,14 +29,9 @@
           <h2 class="fw-bold">Naše služby</h2>
           <p class="text-body-secondary mb-0">Realizace pro novostavby i rekonstrukce, průmysl i bytové domy.</p>
         </div>
-        <!-- <div class="col-md-4 text-md-end mt-3 mt-md-0">
-          <a href="#kontakt" class="btn btn-primary px-3">Nezávazná poptávka</a>
-        </div> -->
       </div>
 
       <div class="row g-4">
-        <!-- ... vaše karty služeb beze změny ... -->
-        <!-- (nechal jsem je, jak máte) -->
         <div class="col-12 col-sm-6 col-lg-4">
           <div class="p-4 rounded-4 service-card h-100">
             <i class="bi bi-house-gear-fill icon-xl"></i>
@@ -126,27 +53,27 @@
             <p class="text-body-secondary">Návrh a montáž efektivního osvětlení, řízení, nouzové a bezpečnostní osvětlení.</p>
           </div>
         </div>
-        <div class="col-12 col-sm-6 col-lg-4">
+        <!-- <div class="col-12 col-sm-6 col-lg-4">
           <div class="p-4 rounded-4 service-card h-100">
             <i class="bi bi-sun-fill icon-xl"></i>
             <h3 class="h5 mt-3">Fotovoltaika</h3>
             <p class="text-body-secondary">Návrh, instalace a připojení FVE, hybridní střídače, bateriová úložiště.</p>
           </div>
-        </div>
-        <div class="col-12 col-sm-6 col-lg-4">
+        </div> -->
+        <!-- <div class="col-12 col-sm-6 col-lg-4">
           <div class="p-4 rounded-4 service-card h-100">
             <i class="bi bi-ev-front-fill icon-xl"></i>
             <h3 class="h5 mt-3">Nabíjecí stanice</h3>
             <p class="text-body-secondary">Wallboxy i firemní AC/DC stanice, projekt, montáž, správa a revize.</p>
           </div>
-        </div>
-        <div class="col-12 col-sm-6 col-lg-4">
+        </div> -->
+        <!-- <div class="col-12 col-sm-6 col-lg-4">
           <div class="p-4 rounded-4 service-card h-100">
             <i class="bi bi-house-fill icon-xl"></i>
             <h3 class="h5 mt-3">Chytrá domácnost</h3>
             <p class="text-body-secondary">Loxone / KNX / Shelly – automatizace osvětlení, topení, žaluzie, zabezpečení.</p>
           </div>
-        </div>
+        </div> -->
         <div class="col-12 col-sm-6 col-lg-4">
           <div class="p-4 rounded-4 service-card h-100">
             <i class="bi bi-hdd-network-fill icon-xl"></i>
@@ -161,13 +88,20 @@
             <p class="text-body-secondary">Návrh, instalace a revize LPS dle aktuálních norem, ochrana před přepětím.</p>
           </div>
         </div>
-        <div class="col-12 col-sm-6 col-lg-4">
+        <!-- <div class="col-12 col-sm-6 col-lg-4">
           <div class="p-4 rounded-4 service-card h-100">
             <i class="bi bi-tools icon-xl"></i>
             <h3 class="h5 mt-3">Servis &amp; správa</h3>
             <p class="text-body-secondary">Pohotovost, pravidelná údržba a SLA pro bytové domy i firmy.</p>
           </div>
-        </div>
+        </div> -->
+        <div class="col-12 col-sm-6 col-lg-4">
+          <div class="p-4 rounded-4 service-card h-100">
+            <i class="bi bi-tools icon-xl"></i>
+            <h3 class="h5 mt-3">Projekce</h3>
+            <p class="text-body-secondary">Na všechny Vaše projekty rádi zajistíme kvalitní dokumentaci.</p>
+          </div>
+        </div> 
       </div>
 
       <div class="text-center mt-5">
@@ -178,49 +112,60 @@
 
   <div class="divider"></div>
 
-  <!-- O NAS -->
   <section id="onas" class="py-5 section-muted">
-    <div class="container">
-      <div class="row g-4 align-items-center">
-        <div class="col-lg-12">
-          <h2 class="fw-bold mb-4">Kdo je BZ-tech</h2>
+  <div class="container">
+    <div class="row">
+      
+      <!-- LEVÝ SLOUPEC -->
+      <div class="col-lg-9 col-xl-12">
 
-          <p class="lead lh-lg">
-            Společnost <strong>BZ-tech, s.r.o.</strong> byla založena v roce <strong>1999</strong>
-            a sídlí v <strong>Chomutově</strong>. Zaměřujeme se na
-            <strong>slaboproudé i silnoproudé elektroinstalace</strong> v občanské i průmyslové výstavbě.
-          </p>
+        <h2 class="fw-bold mb-4">Kdo je BZ-tech</h2>
 
-          <p class="lh-lg">Poskytujeme kompletní řešení v oblasti:</p>
+        <p>
+          Společnost <strong>BZ-tech, s.r.o.</strong> byla založena v roce
+          <strong>1999</strong> a sídlí v <strong>Chomutově</strong>.
+          Dlouhodobě se zaměřujeme na
+          <strong>slaboproudé i silnoproudé elektroinstalace</strong>
+          v občanské i průmyslové výstavbě.
+        </p>
 
-          <ul class="lh-lg">
-            <li>Elektroinstalace v historických objektech</li>
-            <li>Instalace rozvodů kabelových televizí a zabezpečovacích systémů</li>
-            <li>Anténní a telefonní rozvody</li>
-            <li>Řešení pro <strong>prostory s nebezpečím výbuchu (B)</strong> – čerpací stanice, olejová hospodářství</li>
-          </ul>
+        <p>
+          Realizujeme zakázky jak pro novostavby, tak pro rekonstrukce,
+          včetně elektroinstalací v historických objektech.
+          Součástí našich služeb jsou rovněž rozvody kabelových televizí,
+          zabezpečovací systémy, anténní a telefonní rozvody.
+        </p>
 
-          <p class="lh-lg">
-            Jsme oprávněni k <strong>montážím, revizím, opravám</strong> a zkouškám
-            na elektrických zařízeních do <strong>1000 V</strong> i nad <strong>1000 V</strong>.
-          </p>
+        <p>
+          Máme zkušenosti také s realizacemi v prostředích s
+          <strong>nebezpečím výbuchu (prostředí B)</strong>,
+          zejména pro čerpací stanice pohonných hmot a olejová hospodářství.
+          Zajišťujeme kompletní řešení včetně projektové dokumentace,
+          revizních zpráv a technické podpory.
+        </p>
 
-          <p class="lh-lg">
-            V roce <strong>2006</strong> jsme získali certifikát <strong>EZU</strong> pro výrobu elektrických rozvaděčů.
-            Provádíme také certifikované instalace protipožárních prostupů a retardací kabelových tras
-            systémů <strong>INTUMEX</strong> a <strong>PROMAT</strong>.
-          </p>
+        <p>
+          Jsme oprávněni provádět montáže, revize, opravy a zkoušky
+          elektrických zařízení do <strong>1000 V i nad 1000 V</strong>.
+          V roce <strong>2006</strong> jsme získali certifikát <strong>EZU</strong>
+          pro výrobu elektrických rozvaděčů a provádíme také certifikované
+          instalace protipožárních prostupů systémů
+          <strong>INTUMEX</strong> a <strong>PROMAT</strong>.
+        </p>
 
-          <p class="lh-lg">
-            Naše služby poskytujeme s důrazem na <strong>dlouhodobou spokojenost zákazníků</strong>.
-            Používáme špičkovou měřící a regulační techniku renomovaných výrobců
-            a dbáme na <strong>kvalitu řemeslné práce, profesionalitu a individuální přístup</strong>.
-          </p>
-        </div>
+        <p class="mb-0">
+          Naše služby poskytujeme s důrazem na kvalitu provedení,
+          spolehlivost a dlouhodobou spolupráci.
+          Ke každé zakázce přistupujeme individuálně a zakládáme si
+          na poctivé řemeslné práci a profesionálním přístupu,
+          což potvrzují i opakované zakázky našich klientů.
+        </p>
+
       </div>
-    </div>
-  </section>
 
+    </div>
+  </div>
+</section>  
   <!-- REFERENCE -->
   <section id="reference" class="py-5">
     <div class="container">
@@ -241,7 +186,6 @@
           <div class="logo-slide"><img src="images/kadanm.jpg" alt="Klient 2"></div>
           <div class="logo-slide"><img src="images/chomutov.png" alt="Klient 3"></div>
           <div class="logo-slide"><img src="images/99.png" alt="Klient 4"></div>
-          <!-- <div class="logo-slide"><img src="images/svs.jpg" alt="Klient 5"></div> -->
           <div class="logo-slide"><img src="images/jorcon.png" alt="Klient 6"></div>
           <div class="logo-slide"><img src="images/split.png" alt="Klient 7"></div>
           <div class="logo-slide"><img src="images/scvk2.png" alt="Klient 8"></div>
@@ -251,8 +195,7 @@
           <div class="logo-slide"><img src="images/jirkov.png" alt="Klient 1"></div>
           <div class="logo-slide"><img src="images/kadanm.jpg" alt="Klient 2"></div>
           <div class="logo-slide"><img src="images/chomutov.png" alt="Klient 3"></div>
-          <div class="logo-slide"><img src="images/99.png" alt="Klient 4"></div>
-          <!-- <div class="logo-slide"><img src="images/svs.jpg" alt="Klient 5"></div> -->
+          <div class="logo-slide"><img src="images/99.png" alt="Klient 4"></div>>
           <div class="logo-slide"><img src="images/jorcon.png" alt="Klient 6"></div>
           <div class="logo-slide"><img src="images/split.png" alt="Klient 7"></div>
           <div class="logo-slide"><img src="images/scvk2.png" alt="Klient 8"></div>
@@ -262,7 +205,7 @@
       </div>
     </div>
   </section>
-
+  <div class="divider"></div>
   <!-- KONTAKT -->
   <section id="kontakt" class="py-5 section-muted">
     <div class="container">
@@ -344,52 +287,4 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <!-- <footer class="footer py-5" style="background:linear-gradient(180deg, var(--bz-secondary), #071a3b); color:#c8d4ff">
-    <div class="container">
-      <div class="row g-4">
-        <div class="col-md-5">
-          <div class="d-flex align-items-center mb-2">
-            <strong><?= htmlspecialchars($companyName) ?></strong>
-          </div>
-          <p class="mb-2 small">Elektroinstalace, revize a chytrá řešení. Spolehlivý partner pro vaši stavbu.</p>
-
-          <div class="small">
-            IČO: <?= htmlspecialchars($ico) ?> 
-          </div>
-        </div>
-
-        <div class="col-md-3">
-          <h6 class="text-white">Navigace</h6>
-          <ul class="list-unstyled small">
-            <li><a href="#onas">O nás</a></li>
-            <li><a href="#sluzby">Služby</a></li>
-            <li><a href="#reference">Reference</a></li>
-            <li><a href="#kontakt">Kontakt</a></li>
-          </ul>
-        </div>
-
-        <div class="col-md-4">
-          <h6 class="text-white">Rychlý kontakt</h6>
-          <div class="small">Telefon:
-            <a href="tel:<?= htmlspecialchars($phoneTel) ?>"><?= htmlspecialchars($phoneDisplay) ?></a>
-          </div>
-          <div class="small">E-mail:
-            <a href="mailto:<?= htmlspecialchars($email) ?>"><?= htmlspecialchars($email) ?></a>
-          </div>
-          <div class="small">Adresa: <?= htmlspecialchars($address) ?></div>
-        </div>
-      </div>
-
-      <hr class="border-light-subtle my-4">
-      <div class="d-flex justify-content-between small flex-column flex-md-row gap-2">
-        <div>© <span id="year"></span> <?= htmlspecialchars($companyName) ?>. Všechna práva vyhrazena.</div>
-      </div>
-    </div>
-  </footer> -->
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="script.js"></script>
-</body>
-</html>
 <?php require 'includes/footer.php'; ?>

@@ -6,10 +6,9 @@
       <div class="col-md-5">
         <strong class="d-block mb-2"><?= htmlspecialchars($companyName) ?></strong>
         <p class="small mb-2">
-          Elektroinstalace, revize a chytrá řešení.<br>
-          Spolehlivý partner pro vaši stavbu.
         </p>
         <div class="small">IČO: <?= htmlspecialchars($ico) ?></div>
+        <div class="small">Dodavatel je zapsán v OR KS Ústí nad Labem spis. značka C/15716</div>
       </div>
 
       <!-- NAVIGACE -->
@@ -48,7 +47,7 @@
     <hr class="border-light-subtle my-4">
 
     <div class="small text-center text-md-start">
-      © <?= date('Y') ?> <?= htmlspecialchars($companyName) ?>. Všechna práva vyhrazena.
+      © <?= date('Y') ?> <?= htmlspecialchars($companyName) ?> Všechna práva vyhrazena.
     </div>
   </div>
 </footer>
