@@ -3,24 +3,6 @@
 <?php require 'includes/navbar.php'; ?>
 
   <!-- HERO -->
-  <!-- <header id="home" class="hero">
-    <div class="container py-5">
-      <div class="row justify-content-center">
-        <div class="col-xl-9 col-lg-10">
-          <h1 class="display-4 mb-3">Elektroinstalace, revize a chytrá řešení pro firmy i domácnosti</h1>
-          <p class="lead mb-4">Komplexní přístup, špičková kvalita a jasné termíny. Postaráme se o vše od návrhu po servis.</p>
-          <div class="d-flex gap-3 justify-content-center">
-            <a href="#kontakt" class="btn btn-lg btn-primary"><i class="bi bi-envelope-paper-fill me-2"></i>Poptat služby</a>
-            <a href="#sluzby" class="btn btn-lg btn-outline-light"><i class="bi bi-grid-fill me-2"></i>Prohlédnout služby</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="floating-cta">
-      <a href="#sluzby" class="text-white-50 small text-decoration-none"><i class="bi bi-chevron-double-down"></i> Pokračovat</a>
-    </div>
-  </header> -->
-
   <header id="home" class="hero">
   <div class="hero-content">
     <div class="container py-5">
@@ -72,7 +54,7 @@
           <div class="p-4 rounded-4 service-card h-100">
             <i class="bi bi-house-gear-fill icon-xl"></i>
             <h3 class="h5 mt-3">Silnoproudé elektroinstalace</h3>
-            <p class="text-body-secondary">Byty, domy, komerční objekty, průmysl. Kompletní montáž, rekonstrukce i rozšíření.</p>
+            <p class="text-body-secondary">Byty, domy, komerční objekty, průmysl. Kompletní montáž, rekonstrukce i rozšíření. Na zařízeních do 35kV v objektech bez i s nebezpečím výbuchu, "A-B" </p>
           </div>
         </div>
         <div class="col-12 col-sm-6 col-lg-4">
@@ -89,48 +71,27 @@
             <p class="text-body-secondary">Návrh a montáž efektivního osvětlení, řízení, nouzové a bezpečnostní osvětlení.</p>
           </div>
         </div>
-        <!-- <div class="col-12 col-sm-6 col-lg-4">
-          <div class="p-4 rounded-4 service-card h-100">
-            <i class="bi bi-sun-fill icon-xl"></i>
-            <h3 class="h5 mt-3">Fotovoltaika</h3>
-            <p class="text-body-secondary">Návrh, instalace a připojení FVE, hybridní střídače, bateriová úložiště.</p>
-          </div>
-        </div> -->
-        <!-- <div class="col-12 col-sm-6 col-lg-4">
+        <div class="col-12 col-sm-6 col-lg-4">
           <div class="p-4 rounded-4 service-card h-100">
             <i class="bi bi-ev-front-fill icon-xl"></i>
             <h3 class="h5 mt-3">Nabíjecí stanice</h3>
             <p class="text-body-secondary">Wallboxy i firemní AC/DC stanice, projekt, montáž, správa a revize.</p>
           </div>
-        </div> -->
-        <!-- <div class="col-12 col-sm-6 col-lg-4">
-          <div class="p-4 rounded-4 service-card h-100">
-            <i class="bi bi-house-fill icon-xl"></i>
-            <h3 class="h5 mt-3">Chytrá domácnost</h3>
-            <p class="text-body-secondary">Loxone / KNX / Shelly – automatizace osvětlení, topení, žaluzie, zabezpečení.</p>
-          </div>
-        </div> -->
-        <div class="col-12 col-sm-6 col-lg-4">
+        </div>
+         <div class="col-12 col-sm-6 col-lg-4">
           <div class="p-4 rounded-4 service-card h-100">
             <i class="bi bi-hdd-network-fill icon-xl"></i>
-            <h3 class="h5 mt-3">Rozvaděče a slaboproud</h3>
-            <p class="text-body-secondary">Datové rozvody, strukturovaná kabeláž, kamerové a EPS systémy.</p>
+            <h3 class="h5 mt-3">Výroba rozvaděčů</h3>
+            <p class="text-body-secondary">Certifikovaná výroba a kompletace rozvaděčů do 315A dle platných norem.</p>
           </div>
         </div>
         <div class="col-12 col-sm-6 col-lg-4">
           <div class="p-4 rounded-4 service-card h-100">
             <i class="bi bi-cloud-lightning-rain-fill icon-xl"></i>
-            <h3 class="h5 mt-3">Hromosvody</h3>
-            <p class="text-body-secondary">Návrh, instalace a revize LPS dle aktuálních norem, ochrana před přepětím.</p>
+            <h3 class="h5 mt-3">Vnější systém ochrany před bleskem</h3>
+            <p class="text-body-secondary">Návrh, instalace a revize dle aktuálních norem, ochrana před přepětím.</p>
           </div>
         </div>
-        <!-- <div class="col-12 col-sm-6 col-lg-4">
-          <div class="p-4 rounded-4 service-card h-100">
-            <i class="bi bi-tools icon-xl"></i>
-            <h3 class="h5 mt-3">Servis &amp; správa</h3>
-            <p class="text-body-secondary">Pohotovost, pravidelná údržba a SLA pro bytové domy i firmy.</p>
-          </div>
-        </div> -->
         <div class="col-12 col-sm-6 col-lg-4">
           <div class="p-4 rounded-4 service-card h-100">
             <i class="bi bi-tools icon-xl"></i>
@@ -231,7 +192,7 @@
           <div class="logo-slide"><img src="images/jirkov.png" alt="Klient 1"></div>
           <div class="logo-slide"><img src="images/kadanm.jpg" alt="Klient 2"></div>
           <div class="logo-slide"><img src="images/chomutov.png" alt="Klient 3"></div>
-          <div class="logo-slide"><img src="images/99.png" alt="Klient 4"></div>>
+          <div class="logo-slide"><img src="images/99.png" alt="Klient 4"></div>
           <div class="logo-slide"><img src="images/jorcon.png" alt="Klient 6"></div>
           <div class="logo-slide"><img src="images/split.png" alt="Klient 7"></div>
           <div class="logo-slide"><img src="images/scvk2.png" alt="Klient 8"></div>

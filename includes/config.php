@@ -1,8 +1,9 @@
 <?php
 // Základní informace o firmě
-$companyName = "BZ-tech s.r.o.";
+$companyName = "BZ-tech, s.r.o.";
 $ico = "25406019";
-$email = "info@bz-tech.cz";
+$dic = "CZ25406019";
+$email = "info@bztech.cz";
 
 // Telefon
 $phoneDisplay = "+420 608 028 690";

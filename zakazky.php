@@ -217,7 +217,51 @@ $zakazky = [
     'cena' => '750 000 Kč',
     'investor' => 'SBD Chomutov'
   ],
+  [
+    'nazev' => 'Základní škola Kovářská',
+    'misto' => 'Kovářská',
+    'rok' => '2025',
+    'cena' => '470 000 Kč',
+    'investor' => 'Jampl s.r.o.'
+  ],
+   [
+    'nazev' => 'Vodojemy – rekonstrukce',
+    'misto' => 'dle požadavku',
+    'rok' => '2024',
+    'cena' => '730 000 Kč',
+    'investor' => 'SčVK a.s.'
+  ],
+  [
+    'nazev' => 'Elektroinstalace – rekonstrukce po sanaci',
+    'misto' => 'dle požadavku',
+    'rok' => '2022',
+    'cena' => '1 750 000 Kč',
+    'investor' => 'BELIX s.r.o.'
+  ],
+   [
+    'nazev' => 'Elektroinstalace – rekonstrukce po sanaci',
+    'misto' => 'dle požadavku',
+    'rok' => '2023',
+    'cena' => '1 500 000 Kč',
+    'investor' => 'BELIX s.r.o.'
+  ],
+   [
+    'nazev' => 'Elektroinstalace – rekonstrukce po sanaci',
+    'misto' => 'dle požadavku',
+    'rok' => '2024',
+    'cena' => '450 000 Kč',
+    'investor' => 'BELIX s.r.o.'
+  ],
+   [
+    'nazev' => 'Elektroinstalace – rekonstrukce po sanaci',
+    'misto' => 'dle požadavku',
+    'rok' => '2025',
+    'cena' => '1 100 00 Kč',
+    'investor' => 'BELIX s.r.o.'
+  ],
 ];
+
+
 
 usort($zakazky, function ($a, $b) {
     $rokA = (int) preg_replace('/[^0-9].*$/', '', $a['rok']);
