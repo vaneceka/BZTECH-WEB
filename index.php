@@ -41,65 +41,73 @@
 
   <!-- SLUZBY -->
   <section id="sluzby" class="py-6 py-5">
-    <div class="container">
-      <div class="row align-items-end mb-4">
-        <div class="col-md-8">
-          <h2 class="fw-bold">Naše služby</h2>
-          <p class="text-body-secondary mb-0">Realizace pro novostavby i rekonstrukce, průmysl i bytové domy.</p>
+  <div class="container">
+    <div class="row align-items-end mb-4">
+      <div class="col-md-8">
+        <h2 class="fw-bold">Naše služby</h2>
+        <p class="text-body-secondary mb-0">Realizace pro novostavby i rekonstrukce, průmysl i bytové domy.</p>
+      </div>
+    </div>
+
+    <div class="row g-4 justify-content-center">
+      
+      <div class="col-12 col-sm-6 col-lg-4">
+        <div class="p-4 rounded-4 service-card h-100">
+          <i class="bi bi-house-gear-fill icon-xl"></i>
+          <h3 class="h5 mt-3">Silnoproudé elektroinstalace</h3>
+          <p class="text-body-secondary">Byty, domy, komerční objekty, průmysl. Kompletní montáž, rekonstrukce i rozšíření. Na zařízeních do 35kV v objektech bez i s nebezpečím výbuchu, "A-B".</p>
         </div>
       </div>
 
-      <div class="row g-4">
-        <div class="col-12 col-sm-6 col-lg-4">
-          <div class="p-4 rounded-4 service-card h-100">
-            <i class="bi bi-house-gear-fill icon-xl"></i>
-            <h3 class="h5 mt-3">Silnoproudé elektroinstalace</h3>
-            <p class="text-body-secondary">Byty, domy, komerční objekty, průmysl. Kompletní montáž, rekonstrukce i rozšíření. Na zařízeních do 35kV v objektech bez i s nebezpečím výbuchu, "A-B" </p>
-          </div>
+      <div class="col-12 col-sm-6 col-lg-4">
+        <div class="p-4 rounded-4 service-card h-100">
+          <i class="bi bi-shield-check icon-xl"></i>
+          <h3 class="h5 mt-3">Revize a měření</h3>
+          <p class="text-body-secondary">Výstupní i periodické revize, měření impedancí, protokoly a poradenství k nápravám.</p>
         </div>
-        <div class="col-12 col-sm-6 col-lg-4">
-          <div class="p-4 rounded-4 service-card h-100">
-            <i class="bi bi-shield-check icon-xl"></i>
-            <h3 class="h5 mt-3">Revize a měření</h3>
-            <p class="text-body-secondary">Výstupní i periodické revize, měření impedancí, protokoly a poradenství k nápravám.</p>
-          </div>
-        </div>
-        <div class="col-12 col-sm-6 col-lg-4">
-          <div class="p-4 rounded-4 service-card h-100">
-            <i class="bi bi-brightness-high-fill icon-xl"></i>
-            <h3 class="h5 mt-3">Osvětlení &amp; nouzové systémy</h3>
-            <p class="text-body-secondary">Návrh a montáž efektivního osvětlení, řízení, nouzové a bezpečnostní osvětlení.</p>
-          </div>
-        </div>
-        <div class="col-12 col-sm-6 col-lg-4">
-          <div class="p-4 rounded-4 service-card h-100">
-            <i class="bi bi-ev-front-fill icon-xl"></i>
-            <h3 class="h5 mt-3">Nabíjecí stanice</h3>
-            <p class="text-body-secondary">Wallboxy i firemní AC/DC stanice, projekt, montáž, správa a revize.</p>
-          </div>
-        </div>
-         <div class="col-12 col-sm-6 col-lg-4">
-          <div class="p-4 rounded-4 service-card h-100">
-            <i class="bi bi-hdd-network-fill icon-xl"></i>
-            <h3 class="h5 mt-3">Výroba rozvaděčů</h3>
-            <p class="text-body-secondary">Certifikovaná výroba a kompletace rozvaděčů do 315A dle platných norem.</p>
-          </div>
-        </div>
-        <div class="col-12 col-sm-6 col-lg-4">
-          <div class="p-4 rounded-4 service-card h-100">
-            <i class="bi bi-cloud-lightning-rain-fill icon-xl"></i>
-            <h3 class="h5 mt-3">Vnější systém ochrany před bleskem</h3>
-            <p class="text-body-secondary">Návrh, instalace a revize dle aktuálních norem, ochrana před přepětím.</p>
-          </div>
-        </div>
-        <div class="col-12 col-sm-6 col-lg-4">
-          <div class="p-4 rounded-4 service-card h-100">
-            <i class="bi bi-tools icon-xl"></i>
-            <h3 class="h5 mt-3">Projekce</h3>
-            <p class="text-body-secondary">Na všechny Vaše projekty rádi zajistíme kvalitní dokumentaci.</p>
-          </div>
-        </div> 
       </div>
+
+      <div class="col-12 col-sm-6 col-lg-4">
+        <div class="p-4 rounded-4 service-card h-100">
+          <i class="bi bi-brightness-high-fill icon-xl"></i>
+          <h3 class="h5 mt-3">Osvětlení &amp; nouzové systémy</h3>
+          <p class="text-body-secondary">Návrh a montáž efektivního osvětlení, řízení, nouzové a bezpečnostní osvětlení.</p>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-6 col-lg-4">
+        <div class="p-4 rounded-4 service-card h-100">
+          <i class="bi bi-ev-front-fill icon-xl"></i>
+          <h3 class="h5 mt-3">Nabíjecí stanice</h3>
+          <p class="text-body-secondary">Wallboxy i firemní AC/DC stanice, projekt, montáž, správa a revize.</p>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-6 col-lg-4">
+        <div class="p-4 rounded-4 service-card h-100">
+          <i class="bi bi-hdd-network-fill icon-xl"></i>
+          <h3 class="h5 mt-3">Výroba rozvaděčů</h3>
+          <p class="text-body-secondary">Certifikovaná výroba a kompletace rozvaděčů do 315A dle platných norem.</p>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-6 col-lg-4">
+        <div class="p-4 rounded-4 service-card h-100">
+          <i class="bi bi-cloud-lightning-rain-fill icon-xl"></i>
+          <h3 class="h5 mt-3">Vnější systém ochrany před bleskem</h3>
+          <p class="text-body-secondary">Návrh, instalace a revize dle aktuálních norem, ochrana před přepětím.</p>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-6 col-lg-4">
+        <div class="p-4 rounded-4 service-card h-100">
+          <i class="bi bi-tools icon-xl"></i>
+          <h3 class="h5 mt-3">Projekce</h3>
+          <p class="text-body-secondary">Na všechny Vaše projekty rádi zajistíme kvalitní dokumentaci.</p>
+        </div>
+      </div> 
+
+    </div> </div> </section>
 
       <div class="text-center mt-5">
         <a href="#kontakt" class="btn btn-primary btn-lg"><i class="bi bi-telephone-outbound me-2"></i>Poraďte se s námi</a>
@@ -171,7 +179,6 @@
           <h2 class="fw-bold mb-0">Reference</h2>
           <p class="text-body-secondary mb-0">Vybrané projekty dokončené naším týmem.</p>
         </div>
-        <!-- <a href="#kontakt" class="btn btn-outline-primary d-none d-md-inline-flex">Chci podobný projekt</a> -->
          <a href="zakazky.php" class="btn btn-primary px-3">
           <i class="bi bi-list-check me-2"></i> Přehled vybraných zakázek
         </a>
@@ -180,24 +187,26 @@
       <div class="logo-slider">
         <div class="logo-slide-track">
           <div class="logo-slide"><img src="images/jirkov.png" alt="Klient 1"></div>
-          <div class="logo-slide"><img src="images/kadanm.jpg" alt="Klient 2"></div>
-          <div class="logo-slide"><img src="images/chomutov.png" alt="Klient 3"></div>
+          <div class="logo-slide"><img src="images/paraplicko.png" alt="Klient 2"></div>
+          <div class="logo-slide"><img src="images/jampl.png" alt="Klient 3"></div>
           <div class="logo-slide"><img src="images/99.png" alt="Klient 4"></div>
-          <div class="logo-slide"><img src="images/jorcon.png" alt="Klient 6"></div>
+          <div class="logo-slide"><img src="images/cncmetal.png" alt="Klient 6"></div>
           <div class="logo-slide"><img src="images/split.png" alt="Klient 7"></div>
           <div class="logo-slide"><img src="images/scvk2.png" alt="Klient 8"></div>
           <div class="logo-slide"><img src="images/hpstav.png" alt="Klient 9"></div>
           <div class="logo-slide"><img src="images/petrom.png" alt="Klient 10"></div>
+          <div class="logo-slide"><img src="images/meussj.png" alt="Klient 11"></div>
 
           <div class="logo-slide"><img src="images/jirkov.png" alt="Klient 1"></div>
-          <div class="logo-slide"><img src="images/kadanm.jpg" alt="Klient 2"></div>
-          <div class="logo-slide"><img src="images/chomutov.png" alt="Klient 3"></div>
+          <div class="logo-slide"><img src="images/paraplicko.png" alt="Klient 2"></div>
+          <div class="logo-slide"><img src="images/jampl.png" alt="Klient 3"></div>
           <div class="logo-slide"><img src="images/99.png" alt="Klient 4"></div>
-          <div class="logo-slide"><img src="images/jorcon.png" alt="Klient 6"></div>
+          <div class="logo-slide"><img src="images/cncmetal.png" alt="Klient 6"></div>
           <div class="logo-slide"><img src="images/split.png" alt="Klient 7"></div>
           <div class="logo-slide"><img src="images/scvk2.png" alt="Klient 8"></div>
           <div class="logo-slide"><img src="images/hpstav.png" alt="Klient 9"></div>
           <div class="logo-slide"><img src="images/petrom.png" alt="Klient 10"></div>
+          <div class="logo-slide"><img src="images/meussj.png" alt="Klient 11"></div>
         </div>
       </div>
     </div>
@@ -232,7 +241,7 @@
               </div>
             </div>
 
-            <div class="d-flex align-items-start">
+            <div class="d-flex align-items-start mb-3">
               <i class="bi bi-geo-alt me-2 icon-xl"></i>
               <div>
                 <div class="small text-body-secondary">Adresa</div>
@@ -240,6 +249,14 @@
                 <?= htmlspecialchars($address) ?>
               </div>
             </div>
+
+            <div class="d-flex align-items-start"> <i class="bi bi-file-earmark-text me-2 icon-xl mt-1"></i> <div>
+              <div class="small text-body-secondary mb-1">Fakturační údaje</div>
+              <div>IČ: <?= htmlspecialchars($ico) ?></div>
+              <div>DIČ: <?= htmlspecialchars($dic) ?></div>
+            </div>
+          </div>
+
           </div>
         </div>
 

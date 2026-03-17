@@ -7,10 +7,10 @@
   <title><?= htmlspecialchars($pageTitle ?? $companyName ?? 'BZ-tech s.r.o.') ?></title>
   <meta name="description" content="<?= htmlspecialchars($schemaDescription ?? '') ?>">
 
-  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="assets/icons/bootstrap-icons/font/bootstrap-icons.css">
+  <link rel="icon" type="image/png" href="images/logo.png ">
 
   <script type="application/ld+json">
   {

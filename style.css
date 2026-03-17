@@ -2,7 +2,10 @@
 :root {
   --bz-primary:   #4A818D;
   --bz-secondary: #0b2455;
-  --bz-accent:    #00a8ff; 
+  --bz-accent:    #00a8ff;
+
+  --logo-count: 11;         /* počet původních log */
+  --logo-width: 250px;     /* šířka jednoho loga */
 }
 
 
@@ -24,16 +27,16 @@
 .navbar {
   backdrop-filter: saturate(1.2) blur(8px);
   background: rgba(255, 255, 255, 0.7) !important;
-
 }
 
 @media (max-width: 991.98px) {
   .navbar .navbar-collapse {
     text-align: center;
   }
+
   .navbar .navbar-nav {
     width: 100%;
-    align-items: center; 
+    align-items: center;
   }
 
   .navbar .navbar-nav .btn {
@@ -45,7 +48,6 @@
   }
 }
 
-
 .navbar-brand {
   padding-top: 0;
   padding-bottom: 0;
@@ -55,6 +57,7 @@
   color: #e6ecff;
   text-decoration: none;
 }
+
 .footer a:hover {
   color: #ffffff;
 }
@@ -62,37 +65,11 @@
 /* =========================================================
    Sekce: Hero
    ======================================================= */
-
-   /* min-height: calc(100vh - 90px); */
-/* .hero {
-  align-items: center;
-  color: #fff;
-  display: grid;
-  min-height: 100vh;
-  margin-top: -90px;
-  
-  place-items: center;
-  position: relative;
-  text-align: center;
-  background-image:
-    linear-gradient(
-      rgba(17, 60, 141, 0.75),
-      rgba(7, 26, 59, 0.85)
-    ),
-    url("intro.jpg");
-  background-size: cover;   
-  background-position: center;
-  background-repeat: no-repeat;
-} */
-
 .hero {
   position: relative;
   color: #fff;
   text-align: center;
   background-position: center top;
-
-  /* min-height: calc(100svh - 90px);  */
-  /* min-height: calc(100dvh - 90px);  */
   min-height: calc(100vh - 90px);
 
   display: flex;
@@ -104,7 +81,7 @@
       rgba(17, 60, 141, 0.75),
       rgba(7, 26, 59, 0.85)
     ),
-    url("intro.webp");
+    url("images/intro.webp");
 
   background-size: cover;
   background-position: center top;
@@ -140,30 +117,27 @@
 /* =========================================================
    Komponenty
    ======================================================= */
-/* Ikony */
 .icon-xl {
   color: var(--bz-primary);
   font-size: 2.25rem;
 }
 
-/* Karta služby */
 .service-card {
   border: 1px solid #eef2f7;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
+
 .service-card:hover {
   box-shadow: 0 10px 20px rgba(17, 60, 141, 0.08);
   transform: translateY(-3px);
 }
 
-/* Měkký badge */
 .badge-soft {
   background: rgba(17, 60, 141, 0.08);
   border: 1px solid rgba(17, 60, 141, 0.15);
   color: var(--bz-primary);
 }
 
-/* Dělící linka */
 .divider {
   background: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.08), transparent);
   height: 1px;
@@ -177,7 +151,6 @@
   box-shadow: 0 0 0 0.2rem rgba(17, 60, 141, 0.15);
 }
 
-
 /* =========================================================
    9) LOGA
    ======================================================= */
@@ -185,13 +158,13 @@
   overflow: hidden;
   position: relative;
   width: 100%;
-  background-color: transparent; 
+  background-color: transparent;
   padding: 20px 0;
 }
 
 .logo-slide-track {
   display: flex;
-  width: calc(250px * 18); /* 16 = počet log (8 + 8 duplikátů) */
+  width: calc(var(--logo-width) * (var(--logo-count) * 2)); /* loga + duplikáty */
   animation: scroll 60s linear infinite;
 }
 
@@ -199,14 +172,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 250px; /* šířka jednoho loga */
+  width: var(--logo-width);
   padding: 10px;
 }
 
 .logo-slide img {
   max-width: 180px;
   max-height: 80px;
-  /* filter: grayscale(100%); */
   opacity: 1;
   transition: all 0.3s ease;
 }
@@ -219,21 +191,33 @@
 
 @keyframes scroll {
   0%   { transform: translateX(0); }
-  100% { transform: translateX(calc(-250px * 9)); } /* 8 = původní počet log */
+  100% { transform: translateX(calc(-1 * var(--logo-width) * var(--logo-count))); }
 }
 
 @media (max-width: 768px) {
-  .logo-slide { width: 200px; }
-  .logo-slide img { max-width: 140px; }
+  .logo-slide {
+    width: 200px;
+  }
+
+  .logo-slide img {
+    max-width: 140px;
+  }
 }
 
 @media (max-width: 480px) {
-  .logo-slide { width: 150px; }
-  .logo-slide img { max-width: 100px; }
+  .logo-slide {
+    width: 150px;
+  }
+
+  .logo-slide img {
+    max-width: 100px;
+  }
 }
 
-html { scroll-padding-top: 80px; } 
+html {
+  scroll-padding-top: 80px;
+}
 
 body {
-  padding-top: 90px; 
+  padding-top: 90px;
 }

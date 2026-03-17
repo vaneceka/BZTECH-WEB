@@ -7,7 +7,8 @@
         <strong class="d-block mb-2"><?= htmlspecialchars($companyName) ?></strong>
         <p class="small mb-2">
         </p>
-        <div class="small">IČO: <?= htmlspecialchars($ico) ?></div>
+        <div class="small">IČ: <?= htmlspecialchars($ico) ?></div>
+        <div class="small">DIČ: <?= htmlspecialchars($dic) ?></div>
         <div class="small">Dodavatel je zapsán v OR KS Ústí nad Labem spis. značka C/15716</div>
       </div>
 
@@ -52,7 +53,7 @@
   </div>
 </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
