@@ -107,8 +107,6 @@
         </div>
       </div> 
 
-    </div> </div> </section>
-
       <div class="text-center mt-5">
         <a href="#kontakt" class="btn btn-primary btn-lg"><i class="bi bi-telephone-outbound me-2"></i>Poraďte se s námi</a>
       </div>
