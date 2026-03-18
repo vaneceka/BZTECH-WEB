@@ -10,29 +10,31 @@ Thumbs.db
 # ============================================
 # PHP / Composer
 # ============================================
-vendor/           # Composer balíčky (můžou se vždy doinstalovat)
-composer.lock      # volitelné ignorovat, ale doporučuje se spíš verzovat
+vendor/
 *.cache
 *.tmp
 
+# composer.lock se většinou VERZUJE, tak ho neignoruj
+# composer.lock
+
 # ============================================
-# Enviroment / konfigurace
+# Environment / konfigurace
 # ============================================
 .env
 .env.local
 .env.*.local
 
 # ============================================
-# Node / Frontend (pokud bys používal npm/yarn)
+# Node / Frontend
 # ============================================
-/node_modules/
+node_modules/
 package-lock.json
 yarn.lock
 
 # ============================================
 # Build / dist / assets
 # ============================================
-/dist/
-/build/
-/public/uploads/*
+dist/
+build/
+public/uploads/*
 assets/
