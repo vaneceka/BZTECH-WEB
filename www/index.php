@@ -266,6 +266,7 @@
               method="post"
               class="p-4 bg-white rounded-4 shadow-sm">
             <div class="row g-3">
+              <input type="text" name="website" value="" autocomplete="off" tabindex="-1" style="display:none;">
               <div class="col-12">
                 <label for="jmeno" class="form-label">Jméno a příjmení</label>
                 <input type="text" id="jmeno" name="name" class="form-control" required>

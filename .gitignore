@@ -10,7 +10,7 @@ Thumbs.db
 # ============================================
 # PHP / Composer
 # ============================================
-/vendor/           # Composer balíčky (můžou se vždy doinstalovat)
+vendor/           # Composer balíčky (můžou se vždy doinstalovat)
 composer.lock      # volitelné ignorovat, ale doporučuje se spíš verzovat
 *.cache
 *.tmp
@@ -35,4 +35,4 @@ yarn.lock
 /dist/
 /build/
 /public/uploads/*
-assets
+assets/
